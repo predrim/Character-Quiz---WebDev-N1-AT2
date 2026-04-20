@@ -1,12 +1,9 @@
 body {
-    margin: 0;
-    display: flex;
     justify-content: flex-end;
-    background-image: url("assets/images/background.png");
+    background-image: url("../assets/images/background.png");
     background-repeat: repeat;
     background-size: contain;
     background-position: left;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .logo{
@@ -21,25 +18,28 @@ h1 {
 main {
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
     background: linear-gradient(to right, transparent, black 13%) ;
     color: #f8f8f8;
     text-align: center;
+    font-size: larger;
     width: 50%;
     height: 100vh;
     padding: 2rem 8% 4rem 12%;
-    z-index: 1;
 }
 
 .start-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     align-self: center;
-    width: 30%;
-    height: 4rem;
+    width: 40%;
+    height: 5rem;
     margin-top: auto;
-    border: solid #3d63a8 3px;
+    border: none;
     border-radius: 8px;
-    background: linear-gradient(#6cb5ee, #3d63a8);
-    font-size: 1.5rem;
-    font-family: inherit;
+    background: #3d63a8;
+    font-size: 2rem;
+    text-shadow: 2px 2px black;
+    text-decoration: none;
     color:#f8f8f8;
 }
