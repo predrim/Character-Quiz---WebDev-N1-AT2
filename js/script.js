@@ -22,7 +22,7 @@ let pergunta2 = new Pergunta("Qual é a sua cor favorita",
     ["Vermelho", "Verde", "Laranja", "Amarelo", "Azul", "Rosa", "Violeta", "Azul Claro", "Preto", "Marrom"],
     "../assets/images/question1.webp");
 
-let pergunta3 = new Pergunta("Qual sua comida favorita?", ["Carne", "Arroz", "Tangerina", "Peixe", "Massas",
+let pergunta3 = new Pergunta("Qual dessas comidas você gosta mais?", ["Carne", "Arroz", "Tangerina", "Peixe", "Massas",
      "Algodão doce", "Sanduiche", "Hamburguer", "Chá", "Sushi e Sashimi"]);
 
 let pergunta4 = new Pergunta("Dentre essas virtudes, com qual você mais se identifica", 
