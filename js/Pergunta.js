@@ -1,8 +1,9 @@
 export class Pergunta {
-    constructor(image, question, answers = []) {
-        this.image = image; 
-        this.question = question; 
+    constructor(name, answers = [], image) {
+        this.name = name; 
         this.answers = answers; 
+        this.image = image; 
+        this.resposta = "";
     }
 
     

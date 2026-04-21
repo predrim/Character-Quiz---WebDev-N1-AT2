@@ -14,13 +14,3 @@ export class Personagem{
     }
 }
 
-luffy = new Personagem()
-zoro = new Personagem()
-nami = new Personagem()
-usopp = new Personagem()
-sanji = new Personagem()
-chopper = new Personagem()
-robin = new Personagem()
-franky = new Personagem()
-brook = new Personagem()
-jinbe = new Personagem()

@@ -48,7 +48,7 @@ main {
     gap: 20px;
     margin-bottom: 3%;
 }
-button {
+.answer-button {
     width: 40%;
     height: 4rem;
     margin-top: auto;
