@@ -5,6 +5,4 @@ export class Pergunta {
         this.image = image; 
         this.resposta = "";
     }
-
-    
 }
