@@ -1,0 +1,19 @@
+body {
+    justify-content: flex-end;
+    background-image: url("../assets/images/background-map.webp");
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: left;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, transparent, black 13%);
+    color: #f8f8f8;
+    text-align: center;
+    font-size: large;
+    width: 50%;
+    height: 100vh;
+    padding: 2rem 8% 4rem 12%;
+}
