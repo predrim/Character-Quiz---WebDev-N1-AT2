@@ -77,8 +77,13 @@ backButton.addEventListener("click", (event) =>{
         updateGame()
     }
     return event
+});
+backButton.addEventListener("mouseover", () => {
+    backButton.style.scale = "1.05";
 })
-
+backButton.addEventListener("mouseout", () => {
+    backButton.style.scale = "1";
+})
 function updateGame() {
     switch (page) {
         case 1:
@@ -135,6 +140,15 @@ function makePage(pergunta) {
         });
 
         answersContainer.appendChild(answerButton);
+
+        answerButton.addEventListener("mouseover", () => {
+            answerButton.style.backgroundColor = "#0066ff";
+            answerButton.style.scale = "1.05";
+        })
+        answerButton.addEventListener("mouseout", () => {
+            answerButton.style.backgroundColor = "";
+            answerButton.style.scale = "1";
+        })
     }
 }
 
