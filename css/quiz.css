@@ -50,7 +50,7 @@ main {
 }
 .answer-button {
     width: 40%;
-    height: 4rem;
+    min-height: 4rem;
     margin-top: auto;
     border: none;
     border-radius: 8px;
