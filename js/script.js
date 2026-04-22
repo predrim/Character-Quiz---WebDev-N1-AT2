@@ -3,6 +3,7 @@ import { Personagem } from "./Personagem.js";
 
 let page = 1;
 
+//variaveis para os objetos personagem
 let luffy = new Personagem("Luffy", "Masculino", "Vermelho", "Carne", "Liberdade", "Bombeiro", "Macaco", "Esticar-se")
 let zoro = new Personagem("Zoro", "Masculino", "Verde", "Arroz", "Disciplina", "Policial", "Tigre", "Virar um dragão")
 let nami = new Personagem("Nami", "Feminino", "Laranja", "Tangerina", "Prudência", "Babá", "Gato", "Disparar raios")
@@ -14,6 +15,7 @@ let franky = new Personagem("Franky", "Masculino", "Azul Claro", "Hamburguer", "
 let brook = new Personagem("Brook", "Masculino", "Preto", "Chá", "Alegria", "Detetive", "Girafa", "Ressuscitar")
 let jinbe = new Personagem("Jinbe", "Masculino", "Marrom", "Sushi e Sashimi", "Integridade", "Maquinista", "Urso", "Poder voar")
 
+//variaveis para os objetos pergunta
 let pergunta1 = new Pergunta("Você é do sexo masculino ou feminino?",
     ["Masculino", "Feminino"],
     "../assets/images/question1.webp")
@@ -37,11 +39,13 @@ let pergunta6 = new Pergunta("Qual desses animais você mais gosta?",
 let pergunta7 = new Pergunta("Dentre esses superpoderes, qual você prefere?", ["Esticar-se", "Virar um dragão", "Disparar raios",
     "Ter um bolso infinito", "Intangibilidade", "Tranformar-se em armas", "Ressuscitar", "Poder voar", "Super inteligência", "Crescer membros onde quiser"])
 
+// variaveis para formatação da página
 let questionElement = document.querySelector(".question");
 let answersContainer = document.querySelector(".answers-container");
 let imageElement = document.querySelector(".illustration");
 let backButton = document.querySelector("#bck-btn");
 
+//eventos para o botão de voltar
 backButton.addEventListener("click", (event) =>{
     if (page > 1){
         event.preventDefault();
@@ -84,6 +88,8 @@ backButton.addEventListener("mouseover", () => {
 backButton.addEventListener("mouseout", () => {
     backButton.style.scale = "1";
 })
+
+//função para atualizar a página
 function updateGame() {
     switch (page) {
         case 1:
@@ -120,6 +126,7 @@ function updateGame() {
     }
 }
 
+//função para criar os elementos da página de acordo com a pergunta atual
 function makePage(pergunta) {
     questionElement.textContent = pergunta.name;
     imageElement.src = pergunta.image
@@ -152,6 +159,7 @@ function makePage(pergunta) {
     }
 }
 
+//função para calcular o resultado do quiz
 function calculateResult() {
     let personagens = [luffy, zoro, nami, usopp, sanji, chopper, robin, franky, brook, jinbe];
     let perguntas = [pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, pergunta6, pergunta7];
