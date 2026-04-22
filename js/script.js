@@ -3,16 +3,16 @@ import { Personagem } from "./Personagem.js";
 
 let page = 1;
 
-let luffy = new Personagem("masculino", "Vermelho", "Carne", "Liberdade", "Bombeiro", "Macaco", "Esticar-se")
-let zoro = new Personagem("masculino", "Verde", "Arroz", "Disciplina", "Policial", "Tigre", "Virar um dragão")
-let nami = new Personagem("feminino", "Laranja", "Tangerina", "Prudência", "Babá", "Gato", "Disparar raios")
-let usopp = new Personagem("masculino", "Amarelo", "Peixe", "Bravura", "Designer Gráfico", "Camaleão", "Ter um bolso infinito")
-let sanji = new Personagem("masculino", "Azul", "Massas", "Devoção", "Cabelereiro", "Cabra", "Intangibilidade")
-let chopper = new Personagem("masculino", "Rosa", "Algodão doce", "Inocência", "Professor", "Panda Vermelho", "Super inteligência")
-let robin = new Personagem("feminino", "Violeta", "Sanduiche", "Paciência", "Comissário de bordo", "Falcão", "Crescer membros onde quiser")
-let franky = new Personagem("masculino", "Azul Claro", "Hamburguer", "Autenticidade", "Piloto de Avião", "Rinoceronte", "Transformar-se em armas")
-let brook = new Personagem("masculino", "Preto", "Chá", "Alegria", "Detetive", "Girafa", "Ressuscitar")
-let jinbe = new Personagem("masculino", "Marrom", "Sushi e Sashimi", "Integridade", "Maquinista", "Urso", "Poder voar")
+let luffy = new Personagem("Luffy", "Masculino", "Vermelho", "Carne", "Liberdade", "Bombeiro", "Macaco", "Esticar-se")
+let zoro = new Personagem("Zoro", "Masculino", "Verde", "Arroz", "Disciplina", "Policial", "Tigre", "Virar um dragão")
+let nami = new Personagem("Nami", "Feminino", "Laranja", "Tangerina", "Prudência", "Babá", "Gato", "Disparar raios")
+let usopp = new Personagem("Usopp", "Masculino", "Amarelo", "Peixe", "Bravura", "Designer Gráfico", "Camaleão", "Ter um bolso infinito")
+let sanji = new Personagem("Sanji", "Masculino", "Azul", "Massas", "Devoção", "Cabelereiro", "Cabra", "Intangibilidade")
+let chopper = new Personagem("Chopper", "Masculino", "Rosa", "Algodão doce", "Inocência", "Professor", "Panda Vermelho", "Super inteligência")
+let robin = new Personagem("Robin", "Feminino", "Violeta", "Sanduiche", "Paciência", "Comissário de bordo", "Falcão", "Crescer membros onde quiser")
+let franky = new Personagem("Franky", "Masculino", "Azul Claro", "Hamburguer", "Autenticidade", "Piloto de Avião", "Rinoceronte", "Transformar-se em armas")
+let brook = new Personagem("Brook", "Masculino", "Preto", "Chá", "Alegria", "Detetive", "Girafa", "Ressuscitar")
+let jinbe = new Personagem("Jinbe", "Masculino", "Marrom", "Sushi e Sashimi", "Integridade", "Maquinista", "Urso", "Poder voar")
 
 let pergunta1 = new Pergunta("Você é do sexo masculino ou feminino?",
     ["Masculino", "Feminino"],
@@ -113,10 +113,10 @@ function updateGame() {
         case 7:
             makePage(pergunta7)        
             break;
-        
         default:
-
-            break;            
+            calculateResult();
+            break;
+                       
     }
 }
 
@@ -134,8 +134,8 @@ function makePage(pergunta) {
 
         answerButton.addEventListener("click", () => {
             pergunta.resposta = answer;
-            page += 1;
-
+            if (page < 8) page += 1;
+            console.log("Página: " + page);
             updateGame();
         });
 
@@ -153,6 +153,24 @@ function makePage(pergunta) {
 }
 
 function calculateResult() {
+    let personagens = [luffy, zoro, nami, usopp, sanji, chopper, robin, franky, brook, jinbe];
+    let perguntas = [pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, pergunta6, pergunta7];
+    let atributos = ["sex", "color", "food", "virtue", "profession", "animal", "superpower"]
+    let match = null;
 
+    personagens.forEach(personagem => {
+        perguntas.forEach((pergunta, index) => {
+            let atributoAtual = atributos[index];
+                if (pergunta.resposta === personagem[atributoAtual]){
+                    personagem.addPontos();
+                }
+
+        })
+        
+    })
+
+    personagens.sort((a, b) => b.points - a.points);
+    match = personagens[0];
+    console.log(match.name, match.points);
 }
 updateGame();

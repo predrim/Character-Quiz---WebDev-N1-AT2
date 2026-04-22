@@ -1,8 +1,9 @@
 export class Personagem{
     
-    constructor(sex, color, food, virtue, profession, animal, superpower){
+    constructor(name, sex, color, food, virtue, profession, animal, superpower){
         this.points = 0
         
+        this.name = name
         this.sex = sex
         this.color = color
         this.food = food
