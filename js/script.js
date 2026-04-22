@@ -3,16 +3,16 @@ import { Personagem } from "./Personagem.js";
 
 let page = 1;
 
-let luffy = new Personagem("masculino")
-let zoro = new Personagem("masculino")
-let nami = new Personagem("feminino")
-let usopp = new Personagem("masculino")
-let sanji = new Personagem("masculino")
-let chopper = new Personagem("masculino")
-let robin = new Personagem("feminino")
-let franky = new Personagem("masculino")
-let brook = new Personagem("masculino")
-let jinbe = new Personagem("masculino")
+let luffy = new Personagem("masculino", "Vermelho", "Carne", "Liberdade", "Bombeiro", "Macaco", "Esticar-se")
+let zoro = new Personagem("masculino", "Verde", "Arroz", "Disciplina", "Policial", "Tigre", "Virar um dragão")
+let nami = new Personagem("feminino", "Laranja", "Tangerina", "Prudência", "Babá", "Gato", "Disparar raios")
+let usopp = new Personagem("masculino", "Amarelo", "Peixe", "Bravura", "Designer Gráfico", "Camaleão", "Ter um bolso infinito")
+let sanji = new Personagem("masculino", "Azul", "Massas", "Devoção", "Cabelereiro", "Cabra", "Intangibilidade")
+let chopper = new Personagem("masculino", "Rosa", "Algodão doce", "Inocência", "Professor", "Panda Vermelho", "Super inteligência")
+let robin = new Personagem("feminino", "Violeta", "Sanduiche", "Paciência", "Comissário de bordo", "Falcão", "Crescer membros onde quiser")
+let franky = new Personagem("masculino", "Azul Claro", "Hamburguer", "Autenticidade", "Piloto de Avião", "Rinoceronte", "Transformar-se em armas")
+let brook = new Personagem("masculino", "Preto", "Chá", "Alegria", "Detetive", "Girafa", "Ressuscitar")
+let jinbe = new Personagem("masculino", "Marrom", "Sushi e Sashimi", "Integridade", "Maquinista", "Urso", "Poder voar")
 
 let pergunta1 = new Pergunta("Você é do sexo masculino ou feminino?",
     ["Masculino", "Feminino"],
@@ -152,4 +152,7 @@ function makePage(pergunta) {
     }
 }
 
+function calculateResult() {
+
+}
 updateGame();
