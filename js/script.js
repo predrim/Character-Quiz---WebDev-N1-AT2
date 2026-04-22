@@ -22,22 +22,27 @@ let pergunta1 = new Pergunta("Você é do sexo masculino ou feminino?",
 
 let pergunta2 = new Pergunta("Qual é a sua cor favorita",
     ["Vermelho", "Verde", "Laranja", "Amarelo", "Azul", "Rosa", "Violeta", "Azul Claro", "Preto", "Marrom"],
-    "../assets/images/question1.webp");
+    "../assets/images/question2.webp");
 
 let pergunta3 = new Pergunta("Qual dessas comidas você gosta mais?", ["Carne", "Arroz", "Tangerina", "Peixe", "Massas",
-     "Algodão doce", "Sanduiche", "Hamburguer", "Chá", "Sushi e Sashimi"]);
+    "Algodão doce", "Sanduiche", "Hamburguer", "Chá", "Sushi e Sashimi"],
+    "../assets/images/question3.webp");
 
-let pergunta4 = new Pergunta("Dentre essas virtudes, com qual você mais se identifica", 
-    ["Liberdade", "Disciplina", "Prudência","Bravura", "Devoção", "Inocência", "Paciência", "Autenticidade", "Alegria", "Integridade"]);
+let pergunta4 = new Pergunta("Com qual virtude você mais se identifica?",
+    ["Liberdade", "Disciplina", "Prudência", "Bravura", "Devoção", "Inocência", "Paciência", "Autenticidade", "Alegria", "Integridade"],
+    "../assets/images/question4.webp");
 
-let pergunta5 = new Pergunta("Com qual dessas profissões você identifica?", 
-    ["Bombeiro", "Policial", "Babá", "Designer Gráfico", "Cabelereiro", "Professor", "Comissário de bordo","Piloto de Avião", "Detetive", "Maquinista"],)
+let pergunta5 = new Pergunta("Com qual dessas profissões você se identifica?",
+    ["Bombeiro", "Policial", "Babá", "Designer Gráfico", "Cabelereiro", "Professor", "Comissário de bordo", "Piloto de Avião", "Detetive", "Maquinista"],
+    "../assets/images/question5.webp")
 
-let pergunta6 = new Pergunta("Qual desses animais você mais gosta?", 
-    ["Macaco", "Tigre", "Gato", "Camaleão", "Cabra", "Panda Vermelho", "Falcão", "Rinoceronte", "Girafa", "Urso"],);
+let pergunta6 = new Pergunta("Qual desses animais você mais gosta?",
+    ["Macaco", "Tigre", "Gato", "Camaleão", "Cabra", "Panda Vermelho", "Falcão", "Rinoceronte", "Girafa", "Urso"],
+    "../assets/images/question6.webp");
 
 let pergunta7 = new Pergunta("Dentre esses superpoderes, qual você prefere?", ["Esticar-se", "Virar um dragão", "Disparar raios",
-    "Ter um bolso infinito", "Intangibilidade", "Tranformar-se em armas", "Ressuscitar", "Poder voar", "Super inteligência", "Crescer membros onde quiser"])
+    "Ter um bolso infinito", "Intangibilidade", "Tranformar-se em armas", "Ressuscitar", "Poder voar", "Super inteligência", "Crescer membros onde quiser"],
+    "../assets/images/question7.webp")
 
 // variaveis para formatação da página
 let questionElement = document.querySelector(".question");
@@ -46,11 +51,11 @@ let imageElement = document.querySelector(".illustration");
 let backButton = document.querySelector("#bck-btn");
 
 //eventos para o botão de voltar
-backButton.addEventListener("click", (event) =>{
-    if (page > 1){
+backButton.addEventListener("click", (event) => {
+    if (page > 1) {
         event.preventDefault();
         let perguntaAtual;
-        switch(page){
+        switch (page) {
             case 1:
                 perguntaAtual = pergunta1;
                 break;
@@ -74,7 +79,7 @@ backButton.addEventListener("click", (event) =>{
                 break;
 
         }
-        if (perguntaAtual){
+        if (perguntaAtual) {
             perguntaAtual.resposta = null;
         }
         page -= 1;
@@ -103,26 +108,26 @@ function updateGame() {
         case 3:
             makePage(pergunta3)
             break;
-            
+
         case 4:
             makePage(pergunta4)
             break;
 
         case 5:
-            makePage(pergunta5)        
+            makePage(pergunta5)
             break;
 
         case 6:
-            makePage(pergunta6)        
+            makePage(pergunta6)
             break;
 
         case 7:
-            makePage(pergunta7)        
+            makePage(pergunta7)
             break;
         default:
             calculateResult();
             break;
-                       
+
     }
 }
 
@@ -169,12 +174,12 @@ function calculateResult() {
     personagens.forEach(personagem => {
         perguntas.forEach((pergunta, index) => {
             let atributoAtual = atributos[index];
-                if (pergunta.resposta === personagem[atributoAtual]){
-                    personagem.addPontos();
-                }
+            if (pergunta.resposta === personagem[atributoAtual]) {
+                personagem.addPontos();
+            }
 
         })
-        
+
     })
 
     personagens.sort((a, b) => b.points - a.points);
