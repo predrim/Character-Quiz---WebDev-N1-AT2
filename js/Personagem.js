@@ -16,5 +16,9 @@ export class Personagem{
     addPontos(){
         this.points += 1
     }
+
+    subPontos(){
+        this.points -= 1
+    }
 }
 

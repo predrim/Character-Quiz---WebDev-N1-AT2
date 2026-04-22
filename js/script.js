@@ -14,7 +14,7 @@ let robin = new Personagem("Robin", "Feminino", "Violeta", "Sanduiche", "Paciên
 let franky = new Personagem("Franky", "Masculino", "Azul Claro", "Hamburguer", "Autenticidade", "Piloto de Avião", "Rinoceronte", "Transformar-se em armas")
 let brook = new Personagem("Brook", "Masculino", "Preto", "Chá", "Alegria", "Detetive", "Girafa", "Ressuscitar")
 let jinbe = new Personagem("Jinbe", "Masculino", "Marrom", "Sushi e Sashimi", "Integridade", "Maquinista", "Urso", "Poder voar")
-
+let personagens = [luffy, zoro, nami, usopp, sanji, chopper, robin, franky, brook, jinbe];
 //variaveis para os objetos pergunta
 let pergunta1 = new Pergunta("Você é do sexo masculino ou feminino?",
     ["Masculino", "Feminino"],
@@ -77,6 +77,11 @@ backButton.addEventListener("click", (event) =>{
         if (perguntaAtual){
             perguntaAtual.resposta = null;
         }
+        if (personagens.points > 0){
+            personagens.forEach(personagem => {
+                personagem.subPontos();
+            })
+        }
         page -= 1;
         updateGame()
     }
@@ -94,30 +99,37 @@ function updateGame() {
     switch (page) {
         case 1:
             makePage(pergunta1)
+            calculateResult(); // retirar calculate 
             break;
 
         case 2:
             makePage(pergunta2)
+            calculateResult();
             break;
 
         case 3:
             makePage(pergunta3)
+            calculateResult();
             break;
             
         case 4:
             makePage(pergunta4)
+            calculateResult();
             break;
 
         case 5:
-            makePage(pergunta5)        
+            makePage(pergunta5) 
+            calculateResult();       
             break;
 
         case 6:
-            makePage(pergunta6)        
+            makePage(pergunta6)  
+            calculateResult();      
             break;
 
         case 7:
-            makePage(pergunta7)        
+            makePage(pergunta7)
+            calculateResult();       
             break;
         default:
             calculateResult();
@@ -143,6 +155,9 @@ function makePage(pergunta) {
             pergunta.resposta = answer;
             if (page < 8) page += 1;
             console.log("Página: " + page);
+            personagens.forEach(personagem => {
+                console.log(personagem.name, personagem.points);
+            })
             updateGame();
         });
 
@@ -161,10 +176,11 @@ function makePage(pergunta) {
 
 //função para calcular o resultado do quiz
 function calculateResult() {
-    let personagens = [luffy, zoro, nami, usopp, sanji, chopper, robin, franky, brook, jinbe];
     let perguntas = [pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, pergunta6, pergunta7];
     let atributos = ["sex", "color", "food", "virtue", "profession", "animal", "superpower"]
     let match = null;
+
+    personagens.forEach(personagem => personagem.points = 0);
 
     personagens.forEach(personagem => {
         perguntas.forEach((pergunta, index) => {
@@ -177,8 +193,9 @@ function calculateResult() {
         
     })
 
-    personagens.sort((a, b) => b.points - a.points);
-    match = personagens[0];
-    console.log(match.name, match.points);
+    let maxPoints = Math.max(...personagens.map(p => p.points));
+    let empates = personagens.filter(p => p.points === maxPoints);
+    let randomIndex = Math.floor(Math.random() * empates.length);
+    match = empates[randomIndex];
 }
 updateGame();
