@@ -15,6 +15,7 @@ let franky = new Personagem("Franky", "Masculino", "Azul Claro", "Hamburguer", "
 let brook = new Personagem("Brook", "Masculino", "Preto", "Chá", "Alegria", "Detetive", "Girafa", "Ressuscitar")
 let jinbe = new Personagem("Jinbe", "Masculino", "Marrom", "Sushi e Sashimi", "Integridade", "Maquinista", "Urso", "Poder voar")
 let personagens = [luffy, zoro, nami, usopp, sanji, chopper, robin, franky, brook, jinbe];
+
 //variaveis para os objetos pergunta
 let pergunta1 = new Pergunta("Você é do sexo masculino ou feminino?",
     ["Masculino", "Feminino"],
@@ -99,7 +100,6 @@ function updateGame() {
     switch (page) {
         case 1:
             makePage(pergunta1)
-            calculateResult(); // retirar calculate 
             break;
 
         case 2:
@@ -114,22 +114,18 @@ function updateGame() {
             
         case 4:
             makePage(pergunta4)
-            calculateResult();
             break;
 
         case 5:
-            makePage(pergunta5) 
-            calculateResult();       
+            makePage(pergunta5)        
             break;
 
         case 6:
-            makePage(pergunta6)  
-            calculateResult();      
+            makePage(pergunta6)        
             break;
 
         case 7:
-            makePage(pergunta7)
-            calculateResult();       
+            makePage(pergunta7)       
             break;
         default:
             calculateResult();
@@ -155,9 +151,6 @@ function makePage(pergunta) {
             pergunta.resposta = answer;
             if (page < 8) page += 1;
             console.log("Página: " + page);
-            personagens.forEach(personagem => {
-                console.log(personagem.name, personagem.points);
-            })
             updateGame();
         });
 

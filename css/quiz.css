@@ -11,7 +11,7 @@ main {
     margin: auto;
     background-color: rgb(241, 217, 136);
     width: 60%;
-    height: 100%;
+    min-height: 100vh;
     border-left: solid 3px black;
     border-right: solid 3px black;
 }
@@ -30,7 +30,8 @@ main {
 
 .illustration {
     margin-top: 2%;
-    height: 440px;
+    max-width: 630px;
+    height: 400px;
     border: solid 3px black;
     border-radius: 20px;
 }
