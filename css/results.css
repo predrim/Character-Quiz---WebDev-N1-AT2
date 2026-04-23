@@ -16,7 +16,7 @@ main {
     text-align: center;
     font-size: large;
     width: 50%;
-    height: 100vh;
+    min-height: 100vh;
     padding: 2rem 8% 4rem 12%;
 }
 
@@ -27,6 +27,7 @@ main {
     left: 15%;
     z-index: 10;
 }
+
 
 .result-char-img {
     max-height: 90vh;

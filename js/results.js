@@ -15,7 +15,19 @@ function exibirResultado(vencedor) {
     const pointsElement = document.querySelector(".points-announcement");
 
     imgElement.src = `${vencedor.image}`;
-    nameElement.textContent = `Você se parece com ${vencedor.name}!`;
+    nameElement.textContent = `Você se parece com o(a) ${vencedor.name}!`;
     descElement.textContent = `${vencedor.info}`;
     pointsElement.textContent = `Você marcou ${vencedor.points} pontos a favor de ${vencedor.name}`;
 }
+
+// backbutton
+
+let bckButton = document.querySelector(".back-img");
+
+bckButton.addEventListener("mouseover", () => {
+   bckButton.style.scale = "1.05"; 
+});
+bckButton.addEventListener("mouseout", () => {
+   bckButton.style.scale = "1";
+});
+
