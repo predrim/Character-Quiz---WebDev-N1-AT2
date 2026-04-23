@@ -104,12 +104,10 @@ function updateGame() {
 
         case 2:
             makePage(pergunta2)
-            calculateResult();
             break;
 
         case 3:
             makePage(pergunta3)
-            calculateResult();
             break;
             
         case 4:
