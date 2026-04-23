@@ -6,7 +6,9 @@ body {
     background-position: left;
 }
 
+
 main {
+    position: relative;
     display: flex;
     flex-direction: column;
     background: linear-gradient(to right, transparent, black 13%);
@@ -16,4 +18,35 @@ main {
     width: 50%;
     height: 100vh;
     padding: 2rem 8% 4rem 12%;
+}
+
+.back-btn img {
+    width: 3rem;
+    position: absolute;
+    top: 1rem;
+    left: 15%;
+    z-index: 10;
+}
+
+.result-char-img {
+    max-height: 90vh;
+    margin: auto;
+    filter: drop-shadow(0px 0px 15px black)
+}
+
+.char-announcement {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.char-description {
+    font-size: 1.4rem;
+}
+
+.result-logo {
+    align-self: center;
+    margin-top: 10%;
+    width: 25em;
 }
