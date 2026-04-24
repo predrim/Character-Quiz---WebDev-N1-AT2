@@ -15,7 +15,12 @@ function exibirResultado(vencedor) {
     const pointsElement = document.querySelector(".points-announcement");
 
     imgElement.src = `${vencedor.image}`;
-    nameElement.textContent = `Você se parece com o(a) ${vencedor.name}!`;
+    if (vencedor.sex === "Masculino") {
+        nameElement.textContent = `Você se parece com o ${vencedor.name}!`;
+    }
+    else {
+        nameElement.textContent = `Você se parece com a ${vencedor.name}!`;
+    }
     descElement.textContent = `${vencedor.info}`;
     pointsElement.textContent = `Você marcou ${vencedor.points} pontos a favor de ${vencedor.name}`;
 }
