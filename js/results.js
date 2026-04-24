@@ -20,8 +20,6 @@ function exibirResultado(vencedor) {
     pointsElement.textContent = `Você marcou ${vencedor.points} pontos a favor de ${vencedor.name}`;
 }
 
-// backbutton
-
 let bckButton = document.querySelector(".back-img");
 
 bckButton.addEventListener("mouseover", () => {
