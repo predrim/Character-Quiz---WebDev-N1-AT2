@@ -3,34 +3,34 @@ import { Personagem } from "./Personagem.js";
 
 let page = 1;
 
-let luffy = new Personagem("Luffy", "Masculino", "Vermelho", "Carne", "Liberdade", "Bombeiro", "Macaco", "Esticar-se", "../assets/images/characters/Luffy.png",
+let luffy = new Personagem("Luffy", "Masculino", "Vermelho", "Carne", "Liberdade", "Bombeiro", "Macaco", "Esticar-se", "Sim", "Sim", "Manhã", "../assets/images/characters/Luffy.png",
     "Monkey D. Luffy é o capitão de borracha dos Piratas do Chapéu de Palha que busca o lendário One Piece para se tornar o Rei dos Piratas. Conhecido por seu otimismo contagiante e apetite insaciável, ele combina uma personalidade ingênua com uma lealdade feroz, sendo capaz de desafiar qualquer poder mundial para proteger seus amigos e garantir a liberdade."
 );
-let zoro = new Personagem("Zoro", "Masculino", "Verde", "Arroz", "Disciplina", "Policial", "Tigre", "Virar um dragão", "../assets/images/characters/Zoro.png",
+let zoro = new Personagem("Zoro", "Masculino", "Verde", "Arroz", "Disciplina", "Policial", "Tigre", "Virar um dragão", "Sim", "Não", "Noite", "../assets/images/characters/Zoro.png",
     "Roronoa Zoro é o implacável mestre do Estilo de Três Espadas e o primeiro imediato do bando. Movido pela promessa de ser o maior espadachim do mundo, ele é definido por uma disciplina ferrenha e lealdade inabalável a Luffy, atuando como o pilar de seriedade e força bruta da tripulação."
 );
-let nami = new Personagem("Nami", "Feminino", "Laranja", "Tangerina", "Prudência", "Babá", "Gato", "Disparar raios", "../assets/images/characters/Nami.png",
+let nami = new Personagem("Nami", "Feminino", "Laranja", "Tangerina", "Prudência", "Babá", "Gato", "Disparar raios", "Não", "Não", "Tarde", "../assets/images/characters/Nami.png",
     "Nami é a genial navegadora dos Chapéu de Palha, cujo sonho é mapear o mundo inteiro. Além de sua inteligência estratégica, ela utiliza o Clima-Tact para controlar o clima em combate, sendo o coração compassivo que equilibra o caos do bando com pragmatismo e coragem."
 );
-let usopp = new Personagem("Usopp", "Masculino", "Amarelo", "Peixe", "Bravura", "Designer Gráfico", "Camaleão", "Ter um bolso infinito", "../assets/images/characters/Usopp.png",
+let usopp = new Personagem("Usopp", "Masculino", "Amarelo", "Peixe", "Bravura", "Designer Gráfico", "Camaleão", "Ter um bolso infinito", "Não", "Não", "Tarde", "../assets/images/characters/Usopp.png",
     "Usopp é o atirador e mestre da inventividade do bando, utilizando precisão e estratégias astutas para vencer. Embora seja o membro mais medroso, ele busca se tornar um bravo guerreiro do mar, provando que a verdadeira coragem é enfrentar o perigo mesmo quando se está morrendo de medo."
 );
-let sanji = new Personagem("Sanji", "Masculino", "Azul", "Massas", "Devoção", "Cabelereiro", "Cabra", "Intangibilidade", "../assets/images/characters/Sanji.png",
+let sanji = new Personagem("Sanji", "Masculino", "Azul", "Massas", "Devoção", "Cabelereiro", "Cabra", "Intangibilidade", "Não", "Não", "Manhã", "../assets/images/characters/Sanji.png",
     "Sanji é o mestre cuca da tripulação, um cozinheiro de elite que luta apenas com as pernas para preservar suas mãos. Estrategista brilhante e cavalheiro incorrigível, ele busca o lendário All Blue enquanto protege seus amigos com chutes poderosos e uma paixão ardente."
 );
-let chopper = new Personagem("Chopper", "Masculino", "Rosa", "Algodão doce", "Inocência", "Professor", "Panda Vermelho", "Super inteligência", "../assets/images/characters/Chopper.png",
+let chopper = new Personagem("Chopper", "Masculino", "Rosa", "Algodão doce", "Inocência", "Professor", "Panda Vermelho", "Super inteligência", "Sim", "Sim", "Manhã", "../assets/images/characters/Chopper.png",
     "Tony Tony Chopper é o médico, uma rena que adquiriu consciência humana após comer a Hito Hito no Mi. De grande inocência e coração puro, ele utiliza suas transformações e conhecimentos medicinais para curar seus aliados, sonhando em um dia ser capaz de tratar todas as doenças do mundo."
 );
-let robin = new Personagem("Robin", "Feminino", "Violeta", "Sanduiche", "Paciência", "Comissário de bordo", "Falcão", "Crescer membros onde quiser", "../assets/images/characters/Robin.png",
+let robin = new Personagem("Robin", "Feminino", "Violeta", "Sanduiche", "Paciência", "Comissário de bordo", "Falcão", "Crescer membros onde quiser", "Não", "Sim", "Jinbe", "../assets/images/characters/Robin.png",
     "Nico Robin é a arqueóloga do bando e a única capaz de ler os Poneglyphs para desvendar a História Perdida. Usuária da Hana Hana no Mi, ela floresce partes do corpo em qualquer superfície. De mente fria e introspectiva, encontrou nos Chapéu de Palha o porto seguro que buscou por toda a vida."
 );
-let franky = new Personagem("Franky", "Masculino", "Azul Claro", "Hamburguer", "Autenticidade", "Piloto de Avião", "Rinoceronte", "Transformar-se em armas", "../assets/images/characters/Franky.png",
+let franky = new Personagem("Franky", "Masculino", "Azul Claro", "Hamburguer", "Autenticidade", "Piloto de Avião", "Rinoceronte", "Transformar-se em armas", "Sim", "Não", "Tarde", "../assets/images/characters/Franky.png",
     "Franky é o carpinteiro naval ciborgue que construiu e mantém o Thousand Sunny, atual SUUPER navio do bando. Extravagante e emotivo, ele protege o bando com seu corpo blindado e armas embutidas, vivendo sob o lema 'SUPER' enquanto navega rumo ao fim do mundo."
 );
-let brook = new Personagem("Brook", "Masculino", "Preto", "Chá", "Alegria", "Detetive", "Girafa", "Ressuscitar", "../assets/images/characters/Brook.png",
+let brook = new Personagem("Brook", "Masculino", "Preto", "Chá", "Alegria", "Detetive", "Girafa", "Ressuscitar", "Sim", "Sim", "Noite", "../assets/images/characters/Brook.png",
     "Brook é o músico e esqueleto vivo que retornou à vida graças à Yomi Yomi no Mi. Combinando esgrima clássica com melodias hipnóticas, ele traz alegria à tripulação com suas piadas de caveira, enquanto busca cumprir a promessa de reencontrar a baleia Laboon."
 );
-let jinbe = new Personagem("Jinbe", "Masculino", "Marrom", "Sushi e Sashimi", "Integridade", "Maquinista", "Urso", "Poder voar", "../assets/images/characters/Jinbe.png",
+let jinbe = new Personagem("Jinbe", "Masculino", "Marrom", "Sushi e Sashimi", "Integridade", "Maquinista", "Urso", "Poder voar", "Não", "Não", "Manhã", "../assets/images/characters/Jinbe.png",
     "Jinbe é o honrado timoneiro e mestre do Karatê dos Homens-Peixe, atuando como o pilar de sabedoria dos Chapéu de Palha. Com força colossal e controle sobre as águas, ele dedica sua vida a ajudar Luffy a mudar o destino do mundo e promover a paz entre as raças."
 );
 
@@ -64,6 +64,18 @@ let pergunta7 = new Pergunta("Dentre esses superpoderes, qual você prefere?", [
     "Ter um bolso infinito", "Intangibilidade", "Tranformar-se em armas", "Ressuscitar", "Poder voar", "Super inteligência", "Crescer membros onde quiser"],
     "../assets/images/question7.webp");
 
+let pergunta8 = new Pergunta("Você possui algum tesouro pessoal?",
+    ["Sim", "Não"],
+    "../assets/images/question8.webp");
+
+let pergunta9 = new Pergunta("Você tem medo do oceano?",
+    ["Sim", "Não"],
+    "../assets/images/question9.webp")
+
+let pergunta10 = new Pergunta("Qual sua hora do dia favorita?",
+    ["Manhã", "Tarde", "Noite"],
+    "../assets/images/question10.webp")
+
 let questionElement = document.querySelector(".question");
 let answersContainer = document.querySelector(".answers-container");
 let imageElement = document.querySelector(".illustration");
@@ -95,15 +107,24 @@ backButton.addEventListener("click", (event) => {
             case 7:
                 perguntaAtual = pergunta7;
                 break;
+            case 8:
+                perguntaAtual = pergunta8;
+                break;
+            case 9:
+                perguntaAtual = pergunta9;
+                break;
+            case 10:
+                perguntaAtual = pergunta10;
+                break;
         }
         if (perguntaAtual) {
             perguntaAtual.resposta = null;
         }
-        if (personagens.points > 0) {
-            personagens.forEach(personagem => {
+        personagens.forEach(personagem => {
+            if (personagem.points > 0) {
                 personagem.subPontos();
-            })
-        }
+            }
+        });
         page -= 1;
         updateGame();
     }
@@ -146,6 +167,19 @@ function updateGame() {
         case 7:
             makePage(pergunta7);
             break;
+
+        case 8:
+            makePage(pergunta8);
+            break;
+
+        case 9:
+            makePage(pergunta9);
+            break;
+
+        case 10:
+            makePage(pergunta10);
+            break;
+
         default:
             calculateResult();
             window.location.href = "../html/results.html";
@@ -154,40 +188,40 @@ function updateGame() {
 }
 
 function makePage(pergunta) {
-        questionElement.textContent = pergunta.name;
-        imageElement.src = pergunta.image;
+    questionElement.textContent = pergunta.name;
+    imageElement.src = pergunta.image;
 
-        if (answersContainer) answersContainer.innerHTML = "";
+    if (answersContainer) answersContainer.innerHTML = "";
 
-        for (let answer of pergunta.answers) {
+    for (let answer of pergunta.answers) {
 
-            let answerButton = document.createElement("button")
-            answerButton.classList.add("answer-button");
-            answerButton.textContent = answer;
+        let answerButton = document.createElement("button")
+        answerButton.classList.add("answer-button");
+        answerButton.textContent = answer;
 
-            answerButton.addEventListener("click", () => {
-                pergunta.resposta = answer;
-                if (page < 8) page += 1;
-                console.log("Página: " + page);
-                updateGame();
-            });
+        answerButton.addEventListener("click", () => {
+            pergunta.resposta = answer;
+            if (page < 11) page += 1;
+            console.log("Página: " + page);
+            updateGame();
+        });
 
-            answersContainer.appendChild(answerButton);
+        answersContainer.appendChild(answerButton);
 
-            answerButton.addEventListener("mouseover", () => {
-                answerButton.style.backgroundColor = "#0066ff";
-                answerButton.style.scale = "1.05";
-            })
-            answerButton.addEventListener("mouseout", () => {
-                answerButton.style.backgroundColor = "";
-                answerButton.style.scale = "1";
-            })
-        }
+        answerButton.addEventListener("mouseover", () => {
+            answerButton.style.backgroundColor = "#0066ff";
+            answerButton.style.scale = "1.05";
+        })
+        answerButton.addEventListener("mouseout", () => {
+            answerButton.style.backgroundColor = "";
+            answerButton.style.scale = "1";
+        })
+    }
 }
 
 function calculateResult() {
-    let perguntas = [pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, pergunta6, pergunta7];
-    let atributos = ["sex", "color", "food", "virtue", "profession", "animal", "superpower"];
+    let perguntas = [pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, pergunta6, pergunta7, pergunta8, pergunta9, pergunta10];
+    let atributos = ["sex", "color", "food", "virtue", "profession", "animal", "superpower", "treasure", "oceanFear", "dayTime"];
     let match = null;
 
     personagens.forEach(personagem => personagem.points = 0);
